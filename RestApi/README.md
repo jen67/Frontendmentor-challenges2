@@ -16,7 +16,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
     - [Continued development](#continued-development)
   - [Author 👩‍💻](#author-)
 
-
 ## Overview
 
 ### The challenge
@@ -34,10 +33,9 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution Url](https://github.com/jen67/Frontendmentor-challenges2/tree/main/RestApi)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process

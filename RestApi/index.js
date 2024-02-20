@@ -61,6 +61,11 @@
     let borderCountries = country.borders
       ? country.borders.map((border) => `<button>${border}</button>`).join("")
       : "";
+    let nativeName = country.name.nativeName
+      ? Object.values(country.name.nativeName)
+          .map((name) => name.common)
+          .join(", ")
+      : "";
     let capital = country.capital || "";
     let region = country.region || "";
     let population = country.population || "";
@@ -77,11 +82,14 @@
             <div class="flex-items2">
                 <div class="details">
                     <h2>${country.name.common}</h2>
+                    <p><span>Native Name: </span> ${nativeName}</p>
                     <p> <span>Population: </span> ${population} </p>
                     <p><span>Region: </span> ${region}</p>
+                    <p><span> Sub Region: </span> ${country.subregion}</p>
                     <p><span>Capital: </span> ${capital}</p>
                 </div>
                 <div class="domains">
+                    <p><span>Top Level Domain: </span> ${country.tld}</p>
                     <p><span>Currencies: </span> ${currencies}</p>
                     <p><span>Languages: </span> ${languages}</p>
                 </div>
