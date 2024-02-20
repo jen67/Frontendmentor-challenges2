@@ -14,9 +14,11 @@ This is a solution to the [REST Countries API with color theme switcher challeng
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-  - [Author 👩‍💻](#author-)
+  - [Author](#author)
 
 ## Overview
+
+This project is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor. The goal was to create a web application where users can explore countries using data from the REST Countries API and toggle between light and dark modes.
 
 ### The challenge
 
@@ -31,12 +33,12 @@ Users should be able to:
 
 ### Screenshot
 
-![My desktop View](./design/Desktop-lightmode.jpeg)
+![Desktop View](./design/Desktop-lightmode.jpeg)
 
 ### Links
 
-- Solution URL: [Solution Url](https://github.com/jen67/Frontendmentor-challenges2/tree/main/RestApi)
-- Live Site URL: [Live Preview](https://rest-countries-mu-two.vercel.app/)
+- [Solution URL](https://github.com/jen67/Frontendmentor-challenges2/tree/main/RestApi)
+- [Live Site URL](https://rest-countries-mu-two.vercel.app/)
 
 ## My process
 
@@ -46,17 +48,17 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- javaScript
+- JavaScript
 
 ### What I learned
 
-This challenge was a bit difficult for me as it is the first time I tried combining using Json file and api. At the end I learnt how to fetch data from an Api and use the data to update my json file and also configure my project in such a way that if the api fails to connect the site still loads from my json file.
+This challenge introduced me to the process of integrating JSON files and APIs. Despite its initial difficulty, I successfully implemented fetching data from an API and updating a JSON file with it. Additionally, I learned how to handle API connection failures gracefully, ensuring that the site can still function using data from the JSON file.
 
 ### Continued development
 
-I intend to keep taking up projects like this and more to help further improve my javaScript skills and also build CRUD Apps.
+In future projects, I aim to further enhance my JavaScript skills and expand my knowledge by building CRUD applications.
 
-## Author 👩‍💻
+## Author
 
 - Linkedin - [Gift Amachree](https://www.linkedin.com/in/gift-amachree-8a523623b/)
 - Frontend Mentor - [@jen67](https://www.frontendmentor.io/profile/jen67)
