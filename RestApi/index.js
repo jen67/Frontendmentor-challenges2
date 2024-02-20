@@ -61,7 +61,7 @@
       : "";
     let borderCountries = country.borders
       ? country.borders.map((border) => `<button>${border}</button>`).join("")
-      : "";
+      : `<p class ="no-border"> ${country.name.common} has no borders </p>`;
     let nativeName = country.name.nativeName
       ? Object.values(country.name.nativeName)
           .map((name) => name.common)
@@ -147,7 +147,7 @@
   }
 
   // Fetch data
-   setTimeout(() => {
+  setTimeout(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => {
         if (!response.ok) {
@@ -168,18 +168,26 @@
           .forEach((loader) => loader.remove());
         data.forEach(displayCountries);
 
+        // Filter 
         filterDrodOtions.forEach((option) => {
           option.addEventListener("click", () => {
             filterTarget.innerHTML = option.innerHTML;
             container.innerHTML = "";
-            const filteredData = data.filter(
-              (country) =>
-                country.region.toLowerCase() === option.innerHTML.toLowerCase()
-            );
+            let filteredData;
+            if (option.innerHTML.toLowerCase() === "all") {
+              filteredData = data;
+            } else {
+              filteredData = data.filter(
+                (country) =>
+                  country.region.toLowerCase() ===
+                  option.innerHTML.toLowerCase()
+              );
+            }
             filteredData.forEach(displayCountries);
           });
         });
 
+        // Search
         searchInput.addEventListener("input", (evt) => {
           const searchValue = evt.target.value.toLowerCase();
           container.innerHTML = "";
@@ -190,6 +198,5 @@
         });
       })
       .catch((error) => console.error("Fetch Error:", error));
- }, 2000);
-
+  }, 1500);
 })();
