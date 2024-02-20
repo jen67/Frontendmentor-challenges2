@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+
   // DOM Elements
   const darktheme = document.getElementById("dark-toggle");
   const navbarImg = document.querySelector("header nav img");
@@ -190,4 +191,5 @@
       })
       .catch((error) => console.error("Fetch Error:", error));
   }, 2000);
+
 })();
