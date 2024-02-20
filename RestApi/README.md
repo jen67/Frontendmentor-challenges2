@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![My desktop View](./design/Desktop-lightmode.jpeg)
 
 ### Links
 
 - Solution URL: [Solution Url](https://github.com/jen67/Frontendmentor-challenges2/tree/main/RestApi)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Preview](https://rest-countries-mu-two.vercel.app/)
 
 ## My process
 
@@ -50,27 +50,11 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+This challenge was a bit difficult for me as it is the first time I tried combining using Json file and api. At the end I learnt how to fetch data from an Api and use the data to update my json file and also configure my project in such a way that if the api fails to connect the site still loads from my json file.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I intend to keep taking up projects like this and more to help further improve my javaScript skills and also build CRUD Apps.
 
 ## Author 👩‍💻
 
