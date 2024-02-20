@@ -207,7 +207,7 @@ header nav img {
   margin: 1rem;
   background-color: var(--card-bg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 320px;
+  width: 100%;
   max-width: 350px;
   height: 400px;
   border-radius: 5px;
@@ -412,6 +412,10 @@ button:hover{
 
   .countries {
     padding: 0;
+  }
+
+  .country-card{
+    width: 320px;
   }
 
   .search-bar {
