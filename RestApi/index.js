@@ -88,7 +88,7 @@
     </div>
     <div class="country-details-container">
         <div class="country-flag">
-            <img src="${country.flags.png}" alt="flag">
+            <img src="${country.flags.png}" alt="${country.flags.alt}">
         </div>
         <div class="flex-items">
             <div class="flex-items2">
