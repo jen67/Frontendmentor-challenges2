@@ -8,7 +8,7 @@
   const filterchevron = document.querySelector(".filter-search img");
   const filterDropdown = document.querySelector("#filter");
   const filterTarget = document.querySelector("#filter-target");
-  const filterDrodOtions = document.querySelectorAll(".filter-options ul li");
+  const filterDropOtions = document.querySelectorAll(".filter-options ul li");
   const searchDiv = document.querySelector(".search");
   const searchInput = document.getElementById("search-countries");
   const container = document.querySelector(".countries");
@@ -118,9 +118,20 @@
 
   // Event Listeners
 
-  filterImg.addEventListener("click", () => {
+  filterImg.addEventListener("click", (evt) => {
+    evt.stopPropagation();
     filterDropdown.classList.toggle("show");
     filterchevron.classList.toggle("rotate");
+  });
+
+  document.addEventListener("click", function (event) {
+    var isClickInside = filterDropdown.contains(event.target);
+
+    if (!isClickInside && filterDropdown.classList.contains("show")) {
+      // The click was outside the filterDropdown, hide it
+      filterDropdown.classList.remove("show");
+      filterchevron.classList.remove("rotate");
+    }
   });
 
   darktheme.addEventListener("click", () => {
@@ -168,8 +179,8 @@
           .forEach((loader) => loader.remove());
         data.forEach(displayCountries);
 
-        // Filter 
-        filterDrodOtions.forEach((option) => {
+        // Filter
+        filterDropOtions.forEach((option) => {
           option.addEventListener("click", () => {
             filterTarget.innerHTML = option.innerHTML;
             container.innerHTML = "";
