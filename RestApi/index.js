@@ -60,8 +60,19 @@
       ? Object.values(country.languages).join(", ")
       : "";
     let borderCountries = country.borders
-      ? country.borders.map((border) => `<button>${border}</button>`).join("")
+      ? country.borders
+          .map((border) => {
+            const borderCountry = data.find((c) => c.cca3 === border);
+            return borderCountry
+              ? `<button class="border-country" data-country-code="${borderCountry.cca3}">
+            <img src="${borderCountry.flags.png}" alt="flag" />
+            ${borderCountry.cca3}
+           </button>`
+              : "";
+          })
+          .join("")
       : `<p class ="no-border"> ${country.name.common} has no borders </p>`;
+    
     let nativeName = country.name.nativeName
       ? Object.values(country.name.nativeName)
           .map((name) => name.common)
@@ -104,6 +115,15 @@
         </div>
     </div>
   `;
+    detailsContainer.querySelectorAll(".border-country").forEach((button) => {
+      button.addEventListener("click", () => {
+        const countryCode = button.getAttribute("data-country-code");
+        const borderCountry = data.find((c) => c.cca3 === countryCode);
+        if (borderCountry) {
+          displayDetails(borderCountry);
+        }
+      });
+    });
 
     detailsContainer.style.display =
       detailsContainer.getAttribute("data-display");
@@ -157,6 +177,8 @@
     container.appendChild(createSkeletonLoader());
   }
 
+  let data;
+
   // Fetch data
   setTimeout(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -173,7 +195,8 @@
         );
         return fetch("./data.json").then((response) => response.json());
       })
-      .then((data) => {
+      .then((fetchedData) => {
+        data = fetchedData;
         document
           .querySelectorAll(".skeleton")
           .forEach((loader) => loader.remove());

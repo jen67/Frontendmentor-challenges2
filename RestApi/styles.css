@@ -417,6 +417,15 @@ button:hover {
   flex-basis: 100px;
 }
 
+.border-country {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.border-country img {
+  width: 30px;
+}
 @media screen and (min-width: 768px) {
   header nav {
     padding: 1.5rem 4rem;
@@ -481,12 +490,12 @@ button:hover {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    gap: 0.7rem;
+    gap: 0.1rem;
   }
 
   .border h3 {
     margin: unset;
-    width: 45%;
+    width: 35%;
   }
 }
 
