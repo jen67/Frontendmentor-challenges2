@@ -147,7 +147,7 @@
   }
 
   // Fetch data
-  // setTimeout(() => {
+   setTimeout(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => {
         if (!response.ok) {
@@ -190,6 +190,6 @@
         });
       })
       .catch((error) => console.error("Fetch Error:", error));
-  // }, 4000);
+ }, 2000);
 
 })();
