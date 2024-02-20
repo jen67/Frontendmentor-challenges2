@@ -189,7 +189,6 @@ input[type="search"]::-ms-clear {
   z-index: 100;
 }
 
-
 .filter-options ul li {
   padding: 0.5rem 0 0.5rem 1.5rem;
   color: var(--text-color);
@@ -257,7 +256,8 @@ input[type="search"]::-ms-clear {
 
 .country-info p,
 .details p,
-.domains p, .no-border {
+.domains p,
+.no-border {
   line-height: 1.1;
   font-size: 1rem;
   margin-top: 0.5rem;
@@ -400,6 +400,7 @@ button:hover {
 .botton-container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -411,8 +412,9 @@ button:hover {
   border-radius: 5px;
   border: none;
   padding: 10px;
-  flex: 1;
   transition: all 0.2s ease-in-out;
+  flex-grow: 0;
+  flex-basis: 100px;
 }
 
 @media screen and (min-width: 768px) {
@@ -478,17 +480,13 @@ button:hover {
     margin-top: 3rem;
     flex-direction: row;
     align-items: center;
-    width: 80%;
+    width: 100%;
     gap: 0.7rem;
   }
 
   .border h3 {
     margin: unset;
     width: 45%;
-  }
-
-  .botton-container button {
-    width: 100%;
   }
 }
 
@@ -522,10 +520,6 @@ button:hover {
   }
   .flex-items {
     width: 50%;
-  }
-
-  .border {
-    width: 92%;
   }
 
   .details h2 {
