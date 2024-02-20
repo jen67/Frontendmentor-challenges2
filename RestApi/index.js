@@ -190,6 +190,6 @@
         });
       })
       .catch((error) => console.error("Fetch Error:", error));
-  }, 2000);
+  }, 4000);
 
 })();

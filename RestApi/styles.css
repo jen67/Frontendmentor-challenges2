@@ -293,7 +293,7 @@ header nav img {
 
 .country-details {
   padding: 5rem 1rem;
-  background-color: var(--details-bg);
+  background-color: var(--background-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -386,6 +386,7 @@ button:hover {
 }
 
 @media screen and (min-width: 768px) {
+   
   header nav {
     padding: 1.5rem 4rem;
   }
@@ -406,7 +407,7 @@ button:hover {
   }
 
   .country-card {
-    width: 320px;
+    width: 18.75rem;
   }
 
   .search-bar {
@@ -483,6 +484,13 @@ button:hover {
     width: 50%;
   }
 
+  .country-card{
+    width: 260px;
+  }
+
+  .countries{
+    gap: 1rem;
+  }
   .flex-items {
     width: 50%;
   }
@@ -497,12 +505,18 @@ button:hover {
 }
 
 @media screen and (min-width: 1280px) {
+  .countries{
+    gap: 0.2rem;
+  }
+  .country-card{
+    width: 16.25rem;
+  }
   .country-flag img {
     width: 550px;
   }
 }
 
-@media screen and (width: 1440px) {
+@media screen and (min-width: 1440px) {
   header nav {
     padding: 1.5rem 3.7 rem;
   }
@@ -515,5 +529,14 @@ button:hover {
   .search {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .countries{
+    gap: 0.5rem;
+  }
+  .country-card{
+    width: 320px;
   }
 }
