@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap");
 
 :root {
-  /* Dark-mode */
+  
   --filter-color: hsl(209, 23%, 22%);
   --card-p-color: hsl(207, 26%, 17%);
   --details-bg: hsl(0, 0%, 100%);
 
-  /* Light-mode */
   --text-color: hsl(200, 15%, 8%);
   --input-color: hsl(0, 0%, 52%);
   --background-color: hsl(0, 0%, 98%);
@@ -503,7 +502,6 @@ button:hover{
 }
 
 @media screen and (min-width: 1280px){
-
   .country-flag img{
     width: 550px;
     
@@ -514,5 +512,22 @@ button:hover{
 
   .flex-items{
     width: 50%;
+  }
+}
+
+@media screen and (width: 1440px){
+  header nav {
+    padding: 1.5rem 3.7
+      rem;
+  }
+
+  .country-card{
+    width: 300px;
+  }
+
+  .countries,
+  .search {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
