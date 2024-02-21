@@ -72,7 +72,7 @@
           })
           .join("")
       : `<p class ="no-border"> ${country.name.common} has no borders </p>`;
-    
+
     let nativeName = country.name.nativeName
       ? Object.values(country.name.nativeName)
           .map((name) => name.common)
