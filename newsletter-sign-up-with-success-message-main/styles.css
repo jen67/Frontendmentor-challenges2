@@ -42,6 +42,7 @@ ul li {
 
 ul li img {
   align-self: flex-start;
+  width: 20px;
 }
 
 .bg {
@@ -66,6 +67,73 @@ h1 {
 
 article p {
   padding-bottom: 1.5rem;
+}
+
+form {
+  margin-top: 3rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 0.4rem;
+}
+
+form div .error {
+  color: var(--Tomato);
+}
+
+form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1.2px solid var(--Grey);
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 1.2rem;
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Dark-slate-grey);
+  color: var(--White);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.succes-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--White);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.succes-page img {
+  width: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.succes-page h2 {
+  font-size: 2rem;
+  padding-bottom: 1.2rem;
+}
+
+.succes-page a {
+  text-decoration: none;
+  color: var(--Dark-slate-grey);
+  font-weight: 700;
 }
 .attribution {
   font-size: 11px;
