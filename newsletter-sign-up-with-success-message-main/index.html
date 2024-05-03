@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Frontend mentor news letter challenge">
   <meta name="author" content="Gift Amachree">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="styles.css">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  
+
 </head>
+
 <body>
-<main>
-<section>
-  <div class="bg">
+  <main>
+    <section>
+      <div class="bg">
 
-  </div>
+      </div>
 
-  <div>
-    <article>
-      <h1>Stay updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
-        <li><img src="./assets/images/icon-list.svg" alt="list icon">Product discovery and building what matters</li>
-        <li><img src="./assets/images/icon-list.svg" alt="">Measuring to ensure updates are a success</li>
-        <li><img src="./assets/images/icon-list.svg" alt="">And much more!</li>
-      </ul>
-    </article>
+      <div class="second-section">
+        <article>
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li><img src="./assets/images/icon-list.svg" alt="list icon">Product discovery and building what matters
+            </li>
+            <li><img src="./assets/images/icon-list.svg" alt="">Measuring to ensure updates are a success</li>
+            <li><img src="./assets/images/icon-list.svg" alt="">And much more!</li>
+          </ul>
+        </article>
 
-    <!-- Sign-up form start -->
-    <form>
-      <label for="email">Email address</label>
-      <input type="email" name="email" id="email" placeholder="email@company.com" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required>
-      <button type="submit">Subscribe to monthly newsletter</button>
-    </form>
-    <!-- Sign-up form end -->
-  </div>
-</section>
+        <!-- Sign-up form start -->
+        <form>
+          <div>
+            <label for="email">Email address</label>
+            <p class="error"></p>
+          </div>
+          <input type="email" name="email" id="email" placeholder="email@company.com"
+            pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required>
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+        <!-- Sign-up form end -->
+      </div>
+    </section>
 
-<!-- Success message start -->
-<section class="succes-page">
-  <div><img src="./assets/images/icon-success.svg" alt="sucess icon"></div>
-  <h1>Thanks for subscribing!</h1>
-  <p>A confirmation email has been sent to <a href="#">ash@loremcompany.com.</a>
-  Please open it and click the button inside to confirm your subscription.</p>
+    <!-- Success message start -->
+    <section class="succes-page">
+      <div><img src="./assets/images/icon-success.svg" alt="sucess icon"></div>
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <a href="#">ash@loremcompany.com.</a>
+        Please open it and click the button inside to confirm your subscription.</p>
 
-  <button>Dismiss message</button>
-</section>
-<!-- Success message end -->
-</main>
-    
+      <button>Dismiss message</button>
+    </section>
+    <!-- Success message end -->
+  </main>
+
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -61,4 +68,5 @@
     </div>
   </footer>
 </body>
+
 </html>
