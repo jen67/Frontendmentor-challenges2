@@ -159,8 +159,9 @@ button {
     min-height: 100vh;
   }
 
-
   section:first-of-type {
+    width: 90vw;
+    max-width: 900px;
     margin: 2rem 0;
     padding: 1.2rem 1rem;
     display: flex;
@@ -172,19 +173,28 @@ button {
     border-radius: 30px;
   }
 
-  h1{
-    font-size: 3rem;
+  .second-section {
+    width: 100%;
+    padding: 1.2rem;
   }
 
-  .second-section{
-    width: 100%;
-    padding: 2rem;
+  form input, button{
+    padding: 1rem;
   }
 }
 
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
 
-@media screen and (min-width: 1440px){
-    h1{
-    font-size: 4rem;
-    }
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .second-section {
+    padding: 2rem;
+  }
 }
