@@ -102,9 +102,9 @@ form input {
   font-size: var(--font-size);
 }
 
-form input:focus{
-    outline: none;
-    border: 2px groove var(--Charcoal-grey);
+form input:focus {
+  outline: none;
+  border: 2px groove var(--Charcoal-grey);
 }
 
 button {
