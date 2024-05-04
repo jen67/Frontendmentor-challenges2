@@ -95,13 +95,11 @@ form div .error {
   color: var(--orange);
 }
 
-.errorstate{
+.errorstate {
   background-color: var(--errorbg);
   border: 1px solid var(--orange);
-  color:var(--orange);
+  color: var(--orange);
 }
-
-
 
 form input {
   width: 100%;
@@ -114,7 +112,7 @@ form input {
 form input:focus {
   outline: none;
   border: 2px groove var(--Charcoal-grey);
-  background-color:transparent;
+  background-color: transparent;
   color: var(--Dark-slate-grey);
 }
 
@@ -175,16 +173,36 @@ button:active {
   padding-bottom: 2rem;
 }
 
-.succes-page button{
-  margin-top:9rem;
+.succes-page button {
+  margin-top: 9rem;
 }
 
-.attribution {
-  font-size: 11px;
+footer {
+  margin-top: 5rem;
+  font-size: 1rem;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  padding: 1.5rem;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-style: oblique;
+  text-decoration: none;
+  border-radius: 20px;
+  border-bottom: 2px solid var(--Charcoal-grey);
+}
+
+.attribution a:hover {
+  background-color: var(--Dark-slate-grey);
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid var(--Grey);
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
@@ -222,11 +240,11 @@ button:active {
     border-radius: 8px;
   }
 
-  .succes-page{
+  .succes-page {
     background-color: var(--Dark-slate-grey);
   }
 
-  .container{
+  .container {
     margin: auto;
     width: 500px;
     max-width: 60vw;
@@ -235,12 +253,16 @@ button:active {
     border-radius: 30px;
   }
 
-  .succes-page .container button{
+  .succes-page .container button {
     margin-top: 1rem;
   }
 
-  .succes-page .container h2{
+  .succes-page .container h2 {
     font-size: 3rem;
+  }
+
+  footer {
+    color: var(--White);
   }
 }
 
