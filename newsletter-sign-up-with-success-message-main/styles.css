@@ -29,6 +29,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: var(--font-size);
   color: var(--Dark-slate-grey);
+  min-height: 100vh;
 }
 
 ul li {
@@ -46,12 +47,12 @@ ul li img {
 }
 
 .bg {
-  background-image: url(./assets/images/illustration-sign-up-mobile.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px;
+  width: 100%;
   border-radius: 0 0 15px 15px;
+}
+
+.bg img {
+  width: 100%;
 }
 
 .second-section {
@@ -114,7 +115,7 @@ button {
   height: 100vh;
   background-color: var(--White);
   z-index: 9999;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   padding: 2rem 1rem 0 1rem;
@@ -135,10 +136,55 @@ button {
   color: var(--Dark-slate-grey);
   font-weight: 700;
 }
+
+.succes-page p {
+  padding-bottom: 4rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--Dark-slate-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+
+  section:first-of-type {
+    margin: 2rem 0;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--White);
+    gap: 1rem;
+    border-radius: 30px;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .second-section{
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1440px){
+    h1{
+    font-size: 4rem;
+    }
 }
