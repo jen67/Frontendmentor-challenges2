@@ -49,5 +49,5 @@ Users should be able to:
 ## Author
 
 - Linkedin - [Gift Amachree](https://www.linkedin.com/in/gift-amachree-8a523623b/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@jen67](https://www.frontendmentor.io/profile/jen67)
+- Twitter - [@JenniferAm96723](https://www.twitter.com/JenniferAm96723)

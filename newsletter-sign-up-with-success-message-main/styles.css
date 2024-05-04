@@ -178,6 +178,7 @@ button:active {
 }
 
 footer {
+  color:hsl(228, 45%, 44%);
   margin-top: 5rem;
   font-size: 1rem;
   text-align: center;
@@ -259,10 +260,6 @@ footer {
 
   .succes-page .container h2 {
     font-size: 3rem;
-  }
-
-  footer {
-    color: var(--White);
   }
 }
 
