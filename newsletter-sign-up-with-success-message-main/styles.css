@@ -12,6 +12,7 @@
   --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
   --Shadow: hsla(4, 100%, 67%, 0.502);
+  --errorbg: hsl(5, 100%, 95%);
 
   /* font-size */
   --font-size: 1rem;
@@ -91,13 +92,21 @@ form div {
 }
 
 form div .error {
-  color: var(--Tomato);
+  color: var(--orange);
 }
+
+.errorstate{
+  background-color: var(--errorbg);
+  border: 1px solid var(--orange);
+  color:var(--orange);
+}
+
+
 
 form input {
   width: 100%;
   padding: 0.8rem;
-  border: 1.2px solid var(--Grey);
+  border: 1px solid var(--Grey);
   border-radius: 5px;
   font-size: var(--font-size);
 }
@@ -105,6 +114,8 @@ form input {
 form input:focus {
   outline: none;
   border: 2px groove var(--Charcoal-grey);
+  background-color:transparent;
+  color: var(--Dark-slate-grey);
 }
 
 button {
@@ -141,11 +152,11 @@ button:active {
   display: none;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem;
 }
 
 .succes-page img {
-  width: 40px;
+  width: 50px;
   margin-bottom: 1.5rem;
 }
 
@@ -161,7 +172,11 @@ button:active {
 }
 
 .succes-page p {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+
+.succes-page button{
+  margin-top:9rem;
 }
 
 .attribution {
@@ -205,6 +220,27 @@ button:active {
   button {
     padding: 1rem;
     border-radius: 8px;
+  }
+
+  .succes-page{
+    background-color: var(--Dark-slate-grey);
+  }
+
+  .container{
+    margin: auto;
+    width: 500px;
+    max-width: 60vw;
+    background-color: var(--White);
+    padding: 3rem;
+    border-radius: 30px;
+  }
+
+  .succes-page .container button{
+    margin-top: 1rem;
+  }
+
+  .succes-page .container h2{
+    font-size: 3rem;
   }
 }
 
