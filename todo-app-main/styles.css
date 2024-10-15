@@ -158,6 +158,10 @@ form div input::placeholder {
   font-size: 0.8rem;
 }
 
+.tags button{
+    cursor: pointer;
+}
+
 .items-left {
   color: var(--bottom-tags);
 }
@@ -193,6 +197,15 @@ button {
   color: var(--bottom-tags);
 }
 
+.grouped-tags-mobile button:hover, .grouped-tags-desktop button:hover {
+  color: var(--text-hover);
+}
+
+.grouped-tags-mobile button:active, .grouped-tags-desktop button:active {
+  color: var(--active-text);
+}
+
+
 .check-task {
   display: flex;
   align-items: center;
@@ -215,6 +228,9 @@ ul li:last-of-type {
   justify-content: space-between;
 }
 
+.clear-completed:hover{
+    font-weight: 700;
+}
 .delete-img img {
   display: block;
   max-width: 10px;
@@ -251,6 +267,7 @@ footer {
 
   ul li {
     font-size: 1.2rem;
+    padding: 1.2rem;
   }
 
   .todo-list-container,
@@ -267,7 +284,13 @@ footer {
     justify-content: space-between;
   }
 
+  .tags p, .tags button {
+    font-size: 1rem;
+  }
+
   .grouped-tags-mobile{
     display: none;
   }
+
+  
 }
