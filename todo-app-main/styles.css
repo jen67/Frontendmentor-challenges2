@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  /* Primary */
+
+  --active-text: hsl(220, 98%, 61%);
+  --checked-gradient: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  /* Neutral */
+  --background-color: hsl(236, 33%, 92%);
+  --card-background-color: hsl(0, 0%, 98%);
+  --cancelled: hsl(233, 11%, 84%);
+  --bottom-tags: hsl(236, 9%, 61%);
+  --text: hsl(235, 19%, 35%);
+  --text-hover: hsl(237, 14%, 26%);
+
+  /* font-size */
+  --font-size: 0.76rem;
+}
+
+.dark-theme {
+  /* Neutral - Dark Theme */
+
+  --text-hover: hsl(236, 33%, 92%);
+  --text: hsl(234, 39%, 85%);
+  --cancelled: hsl(234, 11%, 52%);
+  --bottom-tags: hsl(237, 14%, 26%);
+  --card-background-color: hsl(235, 24%, 19%);
+  --background-color: hsl(235, 21%, 11%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--background-color);
+  color: var(--text);
+  font-size: var(--font-size);
+  transition: background-color 0.5s ease;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 98%);
+}
+
+ul {
+  list-style: none;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+}
+
+header.dark-theme {
+  background-image: url(./images/bg-mobile-dark.jpg);
+}
+
+.logo-witch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+form div {
+  width: 100%;
+  background-color: var(--card-background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  border-radius: 5px;
+}
+
+form div input {
+  width: 100%;
+  padding: 1.1rem 1.1rem 1.1rem 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  caret-color: var(--active-text);
+}
+
+form div input::placeholder {
+  color: var(--bottom-tags);
+}
+
+.circled-check {
+  padding: 0.6rem;
+  border: 1px solid var(--bottom-tags);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: border 0.3s ease;
+}
+
+.circled-check:hover {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  border-image: var(--checked-gradient) 1;
+}
+
+/* The lists part */
+
+.todo-list-container {
+  width: 100%;
+  margin-top: -3rem;
+  background-color: var(--card-background-color);
+  border-radius: 5px;
+  box-shadow: 0 10px 30px -2px var(--cancelled);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.items-left {
+  color: var(--bottom-tags);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.7rem;
+  font-family: inherit;
+  color: var(--bottom-tags);
+}
+
+.grouped-tags-desktop {
+  display: none;
+}
+
+.grouped-tags-mobile {
+  margin-top: 1rem;
+  background-color: var(--card-background-color);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.grouped-tags-mobile button {
+  font-weight: 700;
+  color: var(--bottom-tags);
+}
+
+.check-task {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+ul li {
+  border-bottom: 1px solid var(--cancelled);
+  padding: 1rem;
+}
+
+ul li:last-of-type {
+  border-bottom: none;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-img img {
+  display: block;
+  max-width: 10px;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  color: var(--bottom-tags);
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.attribution a {
+  color: var(--text);
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 60%;
+  }
+
+  header {
+    background-image: url("./images/bg-desktop-light.jpg");
+  }
+
+  header.dark-theme {
+    background-image: url("./images/bg-desktop-dark.jpg");
+  }
+
+  ul li {
+    font-size: 1.2rem;
+  }
+
+  .todo-list-container,
+  .logo-witch,
+  form {
+    max-width: 600px;
+  }
+
+  .grouped-tags-desktop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+  .grouped-tags-mobile{
+    display: none;
+  }
+}

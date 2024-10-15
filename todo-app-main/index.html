@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Todo app</title>
 </head>
+
+
 <body>
 
-  Todo
+  <header>
+      <div class="logo-witch">
+        <h1>TODO</h1>
+        <div class="logo">
+          <img src="./images/icon-moon.svg" alt="Logo" id="theme-switcher">
+        </div>
+      </div>
 
-  <!-- Add dynamic number --> items left
+      <form aria-label="Task input form" id="task-input-form">
+        <div>
+          <div class="circled-check"></div>
+          <input type="text" id="new-todo" name="new-todo" placeholder="Create a new todo ..." required>
+        </div>
+      </form>
+   
+  </header>
 
-  All
-  Active 
-  Completed
+  <main>
+    <ul class="todo-list-container">
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>Complete online JavaScript course</p>
+        </div>
+        <div class="delete-img">
+          <img src="./images/icon-cross.svg" alt="Delete task" class="delete-task">
+        </div>
+      </li>
 
-  Clear Completed
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>Jog around the park 3x</p>
+        </div>
+        <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
+      </li>
 
-  Drag and drop to reorder list
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>10 minutes meditation</p>
+        </div>
+        <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
+      </li>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>Read for 1 hour</p>
+        </div>
+        <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
+      </li>
+
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>Pick up groceries</p>
+        </div>
+        <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
+      </li>
+
+      <li class="todo-item">
+        <div class="check-task">
+          <div class="circled-check"></div>
+          <p>Complete Todo App on Frontend Mentor</p>
+        </div>
+        <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
+      </li>
+
+    <li class="tags">
+      <p class="items-left"><span id="number-left">5</span> items left</p>
+    
+      <div class="grouped-tags-desktop" role="group" aria-label="Todo filters">
+        <button class="filter-tag" aria-label="Show all todos">All</button>
+        <button class="filter-tag" aria-label="Show active todos">Active</button>
+        <button class="filter-tag" aria-label="Show completed todos">Completed</button>
+      </div>
+    
+      <button class="clear-completed" aria-label="Clear completed todos">Clear Completed</button>
+    </li>
+    </ul>
+
+    <div class="grouped-tags-mobile" role="group" aria-label="Todo filters">
+      <button class="filter-tag" aria-label="Show all todos">All</button>
+      <button class="filter-tag" aria-label="Show active todos">Active</button>
+      <button class="filter-tag" aria-label="Show completed todos">Completed</button>
+    </div>
+
+    <p class="description">Drag and drop to reorder list</p>
+  </main>
+ 
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Gift Amachree</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
