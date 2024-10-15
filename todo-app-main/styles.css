@@ -229,7 +229,7 @@ ul li:last-of-type {
 }
 
 .clear-completed:hover{
-    font-weight: 700;
+    font-weight: 600;
 }
 .delete-img img {
   display: block;
