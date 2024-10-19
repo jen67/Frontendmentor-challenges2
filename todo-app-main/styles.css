@@ -17,6 +17,7 @@
   --bottom-tags: hsl(236, 9%, 61%);
   --text: hsl(235, 19%, 35%);
   --text-hover: hsl(237, 14%, 26%);
+  --shadow: hsl(233, 11%, 84%);
 
   /* font-size */
   --font-size: 0.76rem;
@@ -31,6 +32,7 @@
   --bottom-tags: hsl(237, 14%, 26%);
   --card-background-color: hsl(235, 24%, 19%);
   --background-color: hsl(235, 21%, 11%);
+  --shadow: hsl(235, 21%, 11%);
 }
 
 *,
@@ -49,13 +51,13 @@ body {
   background-color: var(--background-color);
   color: var(--text);
   font-size: var(--font-size);
-  transition: background-color 0.5s ease;
 }
 
 h1 {
   font-weight: 700;
   font-size: 2.5rem;
   color: hsl(0, 0%, 98%);
+  letter-spacing: 15px;
 }
 
 ul {
@@ -74,7 +76,7 @@ footer {
 header {
   display: flex;
   flex-direction: column;
-  background-image: url(./images/bg-desktop-light.jpg);
+  background-image: url(./images/bg-mobile-light.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2rem 1.5rem 4rem 1.5rem;
@@ -91,6 +93,7 @@ header.dark-theme {
   gap: 2rem;
   width: 100%;
 }
+
 
 form {
   display: flex;
@@ -143,11 +146,11 @@ form div input::placeholder {
 /* The lists part */
 
 .todo-list-container {
-  width: 100%;
-  margin-top: -3rem;
   background-color: var(--card-background-color);
   border-radius: 5px;
-  box-shadow: 0 10px 30px -2px var(--cancelled);
+  box-shadow: 0 10px 30px -2px var(--shadow);
+  width: 100%;
+  margin-top: -3rem;
 }
 
 .tags {
@@ -158,8 +161,8 @@ form div input::placeholder {
   font-size: 0.8rem;
 }
 
-.tags button{
-    cursor: pointer;
+.tags button {
+  cursor: pointer;
 }
 
 .items-left {
@@ -197,14 +200,15 @@ button {
   color: var(--bottom-tags);
 }
 
-.grouped-tags-mobile button:hover, .grouped-tags-desktop button:hover {
+.grouped-tags-mobile button:hover,
+.grouped-tags-desktop button:hover {
   color: var(--text-hover);
 }
 
-.grouped-tags-mobile button:active, .grouped-tags-desktop button:active {
+.grouped-tags-mobile button:active,
+.grouped-tags-desktop button:active {
   color: var(--active-text);
 }
-
 
 .check-task {
   display: flex;
@@ -228,8 +232,8 @@ ul li:last-of-type {
   justify-content: space-between;
 }
 
-.clear-completed:hover{
-    font-weight: 600;
+.clear-completed:hover {
+  font-weight: 600;
 }
 .delete-img img {
   display: block;
@@ -265,6 +269,10 @@ footer {
     background-image: url("./images/bg-desktop-dark.jpg");
   }
 
+  form div input {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
   ul li {
     font-size: 1.2rem;
     padding: 1.2rem;
@@ -284,13 +292,41 @@ footer {
     justify-content: space-between;
   }
 
-  .tags p, .tags button {
+  .tags p,
+  .tags button {
     font-size: 1rem;
   }
 
-  .grouped-tags-mobile{
+  .grouped-tags-mobile {
     display: none;
   }
 
-  
+  .check-task {
+    gap: 1.5rem;
+  }
+
+  header {
+    padding: 5rem 1.5rem 5rem 1.5rem;
+  }
+
+  .todo-list-container {
+    margin-top: -4.5rem;
+  }
+
+  .description {
+    margin-top: 4rem;
+  }
+
+  .delete-img img {
+    max-width: 15px;
+    display: none;
+  }
+
+  .circled-check {
+  padding: 0.7rem;
+}
+
+.todo-item:hover .delete-img img {
+  display: block;
+}
 }
