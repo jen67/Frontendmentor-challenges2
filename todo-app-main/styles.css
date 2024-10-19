@@ -82,7 +82,7 @@ header {
   padding: 2rem 1.5rem 4rem 1.5rem;
 }
 
-header.dark-theme {
+body.dark-theme header{
   background-image: url(./images/bg-mobile-dark.jpg);
 }
 
@@ -265,7 +265,7 @@ footer {
     background-image: url("./images/bg-desktop-light.jpg");
   }
 
-  header.dark-theme {
+ body.dark-theme header{
     background-image: url("./images/bg-desktop-dark.jpg");
   }
 
