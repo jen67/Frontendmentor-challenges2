@@ -15,24 +15,23 @@
 <body>
 
   <header>
-      <div class="logo-witch">
-        <h1>TODO</h1>
-        <div class="logo">
-          <img src="./images/icon-moon.svg" alt="Logo" id="theme-switcher">
-        </div>
+    <div class="logo-witch">
+      <h1>TODO</h1>
+      <div class="logo">
+        <img src="./images/icon-moon.svg" alt="Logo" id="theme-switcher">
       </div>
+    </div>
 
-      <form aria-label="Task input form" id="task-input-form">
-        <div>
-          <div class="circled-check"></div>
-          <input type="text" id="task-input" name="new-todo" placeholder="Create a new todo ..." required>
-        </div>
-      </form>
-   
+    <form aria-label="Task input form" id="task-input-form">
+      <div>
+        <div class="circled-check"></div>
+        <input type="text" id="task-input" name="new-todo" placeholder="Create a new todo ..." required>
+      </div>
+    </form>
   </header>
 
   <main>
-    <ul class="todo-list-container" dropzone="">
+    <ul class="todo-list-container">
       <li class="todo-item" draggable="true">
         <div class="check-task">
           <div class="circled-check"></div>
@@ -83,17 +82,17 @@
         <div class="delete-img"><img src="./images/icon-cross.svg" alt="Delete task" class="delete-task"></div>
       </li>
 
-    <li class="tags">
-      <p class="items-left"><span id="number-left">5</span> items left</p>
-    
-      <div class="grouped-tags-desktop" role="group" aria-label="Todo filters">
-        <button class="filter-tag" aria-label="Show all todos">All</button>
-        <button class="filter-tag" aria-label="Show active todos">Active</button>
-        <button class="filter-tag" aria-label="Show completed todos">Completed</button>
-      </div>
-    
-      <button class="clear-completed" aria-label="Clear completed todos">Clear Completed</button>
-    </li>
+      <li class="tags">
+        <p class="items-left"><span id="number-left"></span> items left</p>
+
+        <div class="grouped-tags-desktop" role="group" aria-label="Todo filters">
+          <button class="filter-tag" aria-label="Show all todos">All</button>
+          <button class="filter-tag" aria-label="Show active todos">Active</button>
+          <button class="filter-tag" aria-label="Show completed todos">Completed</button>
+        </div>
+
+        <button class="clear-completed" aria-label="Clear completed todos">Clear Completed</button>
+      </li>
     </ul>
 
     <div class="grouped-tags-mobile" role="group" aria-label="Todo filters">
@@ -104,7 +103,7 @@
 
     <p class="description">Drag and drop to reorder list</p>
   </main>
- 
+
 
   <footer>
     <div class="attribution">

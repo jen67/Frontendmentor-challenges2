@@ -134,6 +134,7 @@ form div input::placeholder {
   height: 15px;
   border-radius: 50%;
   transition: border 0.3s ease;
+  position: relative;
 }
 
 .circled-check:hover {
@@ -142,6 +143,8 @@ form div input::placeholder {
   border-radius: 50%;
   border-image: var(--checked-gradient) 1;
 }
+
+
 
 /* The lists part */
 

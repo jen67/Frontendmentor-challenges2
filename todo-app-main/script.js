@@ -1,50 +1,58 @@
 (function () {
-  "use strict";
+  ("use strict");
 
-  document.addEventListener("DOMContentLoaded", () => {
+  /**
+   * Function to set the theme based on whether it's dark or light.
+   * @param {boolean} isDark - Indicates whether the dark theme is active.
+   */
+  const setTheme = (isdark) => {
     const body = document.body;
     const themeToggler = document.querySelector("#theme-switcher");
-    const header = document.querySelector("header");
-    const Form = document.querySelector("#task-input-form");
-    const inputForm = document.querySelector("#task-input");
-    const TaskContainer = document.querySelector(".todo-list-container");
 
-      
-    function applytheme(theme) {
-      if (theme === "dark") {
-          body.classList.add("dark-theme");
-          themeToggler.src = "./images/icon-sun.svg";
-          themeToggler.alt = "sun icon";
-        }
-      else {
-          body.classList.remove('dark-theme');
-          themeToggler.src = "./images/icon-moon.svg";
-          themeToggler.alt = "moon icon";
-        }
+    if (isdark) {
+      body.classList.add("dark-theme");
+      themeToggler.src = "./images/icon-sun.svg";
+      themeToggler.alt = "icon-sun";
+      localStorage.setItem("theme", "dark-theme");
+    } else {
+      body.classList.remove("dark-theme");
+      themeToggler.src = "./images/icon-moon.svg";
+      themeToggler.alt = "icon-moon";
+      localStorage.setItem("theme", "light");
     }
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+      const themeToggler = document.querySelector("#theme-switcher");
+    const form = document.querySelector("#task-input-form");
+    const inputForm = document.querySelector("#task-input");
+    const taskContainer = document.querySelector(".todo-list-container");
+    const storedTheme = localStorage.getItem("theme");
+
+    // Apply stored theme or system preference
+    if (storedTheme === "dark-theme") {
+      setTheme(true);
+    } else if (storedTheme === "light") {
+      setTheme(false);
+    } else {
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      setTheme(systemPrefersDark);
+    }
+
+    // Theme toggler click event
+    themeToggler.addEventListener("click", () => {
+      const isDarkTheme = document.body.classList.toggle("dark-theme");
+      setTheme(isDarkTheme);
+    });
+      
+      
+      //update the todo count
+         const updateTodoCount = () => {
+           
+         };
   });
-})();
-
-const circledCheck = document.querySelectorAll(".circled-check");
-const listItems = document.querySelectorAll(".todo-item");
-const deleteItems = document.getElementsByClassName("delete-task");
-const body = document.body;
-const header = document.querySelector("header");
-
-// Add event listener to each circledCheck element
-circledCheck.forEach((check) => {
-  check.addEventListener("click", () => {
-    // Add your click event logic here
-  });
-});
-
-themeToggler.addEventListener("click", () => {
-  body.classList.toggle("dark-theme");
-
-  if (body.classList.contains("dark-theme")) {
     
-  } else {
-    themeToggler.src = "./images/icon-moon.svg";
-    themeToggler.alt = "moon icon";
-  }
-});
+})();
